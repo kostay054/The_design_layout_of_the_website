@@ -12,9 +12,9 @@ body {
   font-weight: 600;
   color: #626262;
 }
-input,
-button,
-textarea :focus {
+input:focus,
+button:focus,
+textarea:focus {
   outline: none;
 }
 header {
