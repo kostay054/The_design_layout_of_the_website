@@ -1,0 +1,184 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');*/
+/*генератор шрифтоф*/
+/*https://everythingfonts.com/font-face*/
+/*p{*/
+	/*font-family: 'Open Sans', sans-serif;*/
+	/* толщина шрифта */
+	/*font-weight: 300;*/
+/*}*/
+/*-------------------*/
+/*@font-face {
+    font-family: 'Extrabold';
+    src: url('../fonts/Extrabold.eot');
+    src: url('../fonts/Extrabold.eot') format('embedded-opentype'),
+         url('../fonts/Extrabold.woff2') format('woff2'),
+         url('../fonts/Extrabold.woff') format('woff'),
+         url('../fonts/Extrabold.ttf') format('truetype'),
+         url('../fonts/Extrabold.svg#Extrabold') format('svg');
+}
+
+
+p{
+	font-family: 'Extrabold', sans-serif;*/
+	/* толщина шрифта */
+/*	font-weight: 300;
+/*}*/
+
+/*-----------end пример---------------*/
+
+.main-logo-border{
+
+
+    height: 55px;
+    width: 150px;
+    /*равной высоте родительского элемента учитываем рамку*/
+    line-height:49px;
+    text-align: center;
+	border: 3px solid #706b73;
+}
+
+.main-head{
+
+	margin-top: 3%;
+}
+
+.main-logo-border p{
+
+	font-family: 'Open Sans', sans-serif;
+
+	font-weight: 600;
+	color: #706b73;
+
+	/*размер тектста*/
+	font-size: 36px;
+
+}
+
+.main-logo-border span{
+
+	color: #fa9a87;
+}
+
+
+/*середина*/
+.line {
+ 
+
+  /*псевдо классы border-raius -brs*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+
+    /*end border-raius -brs*/
+ display: inline-block;
+ width: 30px;
+ height: 4px;
+ background-color:  #706b73;
+ position: absolute;
+ right: 0;
+ top: 50%;
+ /*двигаем элимент по оси Y*/
+ -webkit-transform: translateY(-2px);
+ -ms-transform: translateY(-2px);
+ -o-transform: translateY(-2px);
+ transform: translateY(-2px);
+
+
+}
+
+/* псевдо элименты */
+
+/*верх*/
+.line:before{
+    /*псевдо классы border-raius -brs*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+
+    /*end border-raius -brs*/
+	position: absolute;
+	 right: 0;
+	 top: 50%;
+
+
+	 /*двигаем элимент по оси Y*/
+	 /* префикс считывание элиментов те каторые стоят на дфижке -webkit*/
+	 -webkit-transform: translateY(-8px);
+	 /* префикс считывание элиментов те каторые стоят на дфижке -ms-*/
+	 -ms-transform: translateY(-8px);
+	 /* префикс считывание элиментов те каторые стоят на дфижке -o-*/
+	 -o-transform: translateY(-8px);
+	 /* префикс считывание элиментов  на всех остальных дфижках */
+	 transform: translateY(-8px);
+	content: '';
+	 width: 30px;
+	 height: 4px;
+	 background-color:  #706b73;
+
+}
+/*низ*/
+.line:after{
+    /*псевдо классы border-raius -brs*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+
+    /*end border-raius -brs*/
+	position: absolute;
+	 right: 0;
+	 top: 50%;
+
+
+	 /*двигаем элимент по оси Y*/
+	 /* префикс считывание элиментов те каторые стоят на дфижке -webkit*/
+	 -webkit-transform: translateY(4px);
+	 /* префикс считывание элиментов те каторые стоят на дфижке -ms-*/
+	 -ms-transform: translateY(4px);
+	 /* префикс считывание элиментов те каторые стоят на дфижке -o-*/
+	 -o-transform: translateY(4px);
+	 /* префикс считывание элиментов  на всех остальных дфижках */
+	 transform: translateY(4px);
+	content: '';
+	 width: 30px;
+	 height: 4px;
+	 background-color:  #706b73;
+
+}
+/*задаю шерину ссылки */
+
+.main-nav-bar{
+    /*display: inline-block;*/
+    /*position: relative; /* Относительное позиционирование */
+    position: relative;
+    /*оптикание текстом*/
+    float:right;
+    margin-top: 25px;
+	width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
