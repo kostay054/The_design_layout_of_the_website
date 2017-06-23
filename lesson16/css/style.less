@@ -1,0 +1,639 @@
+
+// font files
+
+
+// создаем мексины
+.opn-red{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.opn-bold{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+// Base Setiings
+body{
+	font-size:14px;
+	.opn-red;
+	color: @base-text;
+}
+
+// псевдо класс focus
+input, button, textarea{
+&:focus{
+	// говорит что не нужно подчеркивать по состаянию клика
+	outline: none;
+}
+}
+
+// base colr
+// цвета для нашего сайта
+// цвет рамки и текста и полосок
+@base-black: #706b73;
+// цвет в span S
+@base-red: #fc7254;
+// белый
+@white: #fff;
+@base-text: #626262;
+@bg-gray: #f5f5f5;
+@bg-tomi: #4eb2f7;
+@bg-koimona: #c049f8;
+@bg-koire: #817eff;
+@bg-lara: #f74770;
+@n-n: #000;
+@bg-services-list: #bgbgbg;
+@yellow: #ffef3b;
+@grey: #9a9a9a;
+
+
+
+
+// Main Screen
+section{
+	padding-top:10%;
+	padding-bottom:10%;
+}
+
+.section-header{
+	margin-bottom: 7%;
+	h2{
+		
+		font-size: 50px;
+		.opn-bold;
+		span{
+			color: @base-red;
+		}
+	}
+	p{
+		 
+	     font-size: 16px;
+	     
+	}
+}
+
+header{
+	
+	background:@bg-gray url(../img/lesson13.jpg) no-repeat center center;
+	background-size: cover;
+	//  минимальная высота
+	min-height:700px;
+	// на всю страницу 
+	height:100vh;
+}
+
+.main{
+	&-head{
+
+		margin-top:20px;
+	}
+
+	//  Smart рамка 
+	&-logo-border{
+
+  height: 55px;
+  width: 150px;
+   //line-height выстовели по центру по горизонтале равной высоте родительского элемента учитываем рамку
+  line-height: 49px;
+  text-align: center;
+  border: 2px solid @base-black;
+	     // сам текс
+	     p{
+	     	.opn-bold;
+	     	font-size: 36px;
+	     	color: @base-black;
+	     	// S
+	     	span{
+
+	     		color: @base-red;
+	     	}
+	     }
+    }
+     // ссылка 
+	&-nav-bar{
+		height:55px;
+		width: 55px;
+		position:relative;
+		float:right;
+	}
+
+	&-text{
+		margin-top: 3%;
+		text-align: center;
+
+		h1{
+
+			font-size: 50px;
+			.opn-bold;
+
+			span{
+				color: lighten(@base-red,5%);
+			}
+			p{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
+
+	&-form{
+		background-color: @white;
+		margin-top:10%;
+		padding:35px;
+
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+		box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+
+		// скругленость
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+			
+			&-header{
+				text-align:center;
+	            font-size:20px;
+	            .opn-bold;
+
+
+					span{
+						color: @base-red;
+					}
+		      }
+		      &-btn{
+		      	background-color: @base-red;
+		      	border:none;
+		      	padding: 15px 35px;
+		      	color: @white;
+		      	// так как по умолчянию  являеться строчно блочным элиментом
+		      	display:block;
+		      	// азночяет что с верху с низу будет отступы 0 а посторонам автомотическое выравнивание по центру
+		      	margin: 0 auto;
+		      	margin-top: 30px;
+		      	font-size:16px;
+		      	-webkit-border-radius: 50px;
+		      	-moz-border-radius: 50px;
+		      	-ms-border-radius: 50px;
+		      	-o-border-radius: 50px;
+		      	border-radius: 50px;
+		      	span{
+
+		      		font-size: 16px;
+		      	}
+		      	&:hover{
+		      		 box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.08);
+		      	}
+		      }
+		      input, textarea{
+		      	width:100%;
+		      	border:none;
+		      	border-bottom: 1px solid @base-black;
+		      	margin-top:30px;
+		      }
+	}
+
+}
+
+// наш бутерброд
+.line{
+  
+  width:30px;
+  height:4px;
+  background-color:@base-black;
+  
+  // строчто блочный
+  dysplay: inline-block;
+  // закрепили
+  position: absolute;
+  right: 0;
+  top: 50%;
+  /*псевдо классы border-raius работа на других мониторах -brs*/
+  // скругление
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  /*двигаем элимент по оси Y -trf */
+  // чтобы встал четко по ценру а не по его краю 4 - 2
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+
+	  &:before, &:after{
+
+	  	background-color: @base-black;
+	  	// строчто блочный
+	  	dysplay: inline-block;
+	  	// без него &:before , &:after не будут работать
+	  	// чтобы появились
+	  	content:'';
+	    width: 30px;
+	    height: 4px;
+	    // закрепили
+	    position:absolute;
+	    top:50%;
+	    right:0;
+	     /*псевдо классы border-raius работа на других мониторах -brs*/
+	     // скругление
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+	}
+	// верх
+	   &:before{
+	  //двигаем элимент по оси Y -trf 
+	  -webkit-transform: translateY(-8px);
+	  -ms-transform: translateY(-8px);
+	  -o-transform: translateY(-8px);
+	  transform: translateY(-8px);
+	}
+	  // в низ
+	  &:after{
+	  //двигаем элимент по оси Y -trf 
+	  -webkit-transform: translateY(4px);
+	  -ms-transform: translateY(4px);
+	  -o-transform: translateY(4px);
+	  transform: translateY(4px);
+
+	  }
+  
+}
+// Process section
+
+.process{
+	&-box{
+		color: @white;
+		text-align:center;
+		padding: 25px;
+		padding-top: 35px;
+		i.fa{
+			font-size: 50px;
+		}
+		h4{
+			.opn-bold;
+			margin-top: 20px;
+			font-size: 20px;
+		}
+		p{
+			.opn-red;
+			margin-top: 25px;
+			margin-bottom: 20px;
+			font-size: 16px;
+
+		}
+		&:hover{
+			box-shadow: 0px 0px 35px 0px rgba(20, 20, 21, 0.21);
+		}
+	}
+	&-btn{
+// ------------------------- подгоняем кнопку-------------
+        // чтобы не зависила от остальных элиментов
+        position:absolute;
+        left:50%;
+        margin-left: -40%;
+        bottom: -30px;
+
+
+// ---------------end кнопка-------------
+        border: none;
+		color: @base-black;
+		padding: 15px; 
+		width:80%;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @white;
+		font-size:16px;
+//----при навидении 
+        &:hover{
+
+        	box-shadow: 0px 6px 14px 0px rgba(20, 20, 21, 0.09);
+        }
+
+	}
+}
+
+.btn-plus{
+	vertical-align: middle;
+	margin-right: 5px;
+	width: 16px;
+    height: 1px;
+    background-color: @base-black; //@base-black
+    display: inline-block;
+
+    &:before{
+
+    	display:inline-block;
+    	content: '';
+    	width: 16px;
+    	height: 1px;
+    	position:absolute;
+    	background-color: @base-black;
+    	-webkit-transform: rotate(90deg) translateY(8px);
+    	-ms-transform: rotate(90deg) translateY(8px);
+    	-o-transform: rotate(90deg) translateY(8px);
+    	transform: rotate(90deg) translateY(8px);
+
+    }
+}
+
+.box{
+
+	&-tomi{
+		
+		background-color: @bg-tomi;
+	}
+	&-koimona{
+		background-color: @bg-koimona;
+	}
+	&-koire{
+		background-color: @bg-koire;
+	}
+	&-lara{
+       background-color: @bg-lara;
+	}
+
+}
+i.fa-camera-retro{
+	-webkit-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+// Works section
+.works-box { 
+	// чтобы элименты которые в works-box с position:absolute;  выравнивались относительно works-box
+	position:relative;
+	height: 360px;
+	
+	
+}
+
+.signature {
+	// чьтобы выравнивание было относительно родительского элимента
+	// position:absolute;
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.8);
+	color:@white;
+	text-align: center;
+	// line-height: 360; // выравнивает по горизонтале
+	// флекс d--f
+	display: -webkit-flex;
+	// display: -moz-flex; //лишнии
+	// display: -ms-flex; //лишнии
+	// display: -o-flex; //лишнии
+	display: flex;
+	justify-content: center; // за счет его выравнивает
+	align-items:center; // выравнивание элимента 
+	-webkit-justify-content: center; // за счет его выравнивает
+	// перед этим надо чтоб кнопка и параграф находились в отдельном div
+	-webkit-align-items:center; // выравнивание элимента 
+    opacity: 0; // по умолчании 0 у нас есть просто картинка
+	&:hover{
+		opacity: 1; // при наведении будет отоброжаться текст кнопка
+	}
+	// чтобы плавно менялось
+	-webkit-transition: all 0.2; // 0.2 скорость opacity-> all
+	-o-transition: all 0.2; // 0.2 скорость 
+	transition: all 0.2; // 0.2 скорость 
+
+}
+.sign{
+	p{
+		.opn-bold;
+		font-size: 22px;
+	}
+	button{
+
+		border: none;
+		padding: 15px 35px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @base-red;
+	}
+}
+
+.works-row{
+	margin-top: 2%;
+}
+
+// ------------------ Services section ---------
+
+
+.services{
+&-list{
+	// убрал линии
+	list-style: none;
+
+     
+		&-item{
+			// чтобы стали блочными элиментами
+			display:block;
+			margin: 25px auto;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			background-color: @bg-services-list;
+			box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
+
+		}
+  }
+
+	  &-info{
+	  		h4{
+	  		font-size: 30px;
+	  	}
+	  	
+	  	p{
+	  		font-size: 16px;
+	  	}
+      }
+
+	  &-line{
+	  	width: 60px;
+	  	height: 3px;
+	  	background-color: @base-red;
+	  	display: inline-block;
+	  	margin-bottom: 10px;
+	  	margin-top: 10px;
+	  }
+
+	  // btn Modern App Design
+	  &-btn{
+		margin-top: 50px;
+        border: 1px solid lighten(@base-black,50%);
+		color: @base-black;
+		padding: 15px 55px; 
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @white;
+		font-size:16px;
+//----при навидении 
+         box-shadow: 0px 6px 14px 0px rgba(20, 20, 21, 0.09);
+   
+
+
+	  }
+
+}
+
+  // акардион bootstrap
+
+  .panel-default>.panel-heading{
+  	h4 {
+  		color: @base-red;
+  		.opn-bold;
+  	}
+  }
+// слайдер /slick/
+
+.feedback{
+	&-box{
+			padding: 15px;
+			margin-left: 15px;
+			margin-right: 15px;
+		// 1 вариант как можно скруглить авотар  еще есть вариант 2 в css ботстрап 
+	// 		img{
+	// 	height: 128px;
+	// 	width: 128px;
+	// 	-webkit-border-radius: 50%;
+	// 	-moz-border-radius: 50%;
+	// 	-ms-border-radius: 50%;
+	// 	-o-border-radius: 50%;
+	// 	border-radius: 50%;
+	// }
+	// end скруглить авотар 
+		p {
+			font-size: 17px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			// с лева с право сделали отступы 
+			padding-left: 30px;
+			padding-right: 30px;
+			span{
+				.opn-bold;
+			}
+		}
+			i.fa-star{
+		color:@yellow;
+	}
+
+	}
+
+
+
+	&-img{
+		margin-bottom: -64px;
+	}
+	&-shadow {
+		box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.09);
+		padding: 10px;
+		padding-top: 64px;
+	}
+   &-slider-arrows{
+   	position:absolute;
+   	top: 50%;
+   	height: 50px;
+   	font-size: 18px;
+   	z-index:998;
+   	width: 50px;
+   	-webkit-transform: translateY(-9px);
+   	-ms-transform: translateY(-9px);
+   	-o-transform: translateY(-9px);
+   	transform: translateY(-9px);
+   	text-align: center;
+   	box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+	 
+	 padding: 15px;
+	 -webkit-border-radius: 50%;
+	 -moz-border-radius: 50%;
+	 -ms-border-radius: 50%;
+	 -o-border-radius: 50%;
+	 border-radius: 50%;
+	 background-color:@white;
+   	&:hover{
+   		 background-color: @base-red;
+   		 color:@white;
+   		 cursor: pointer;
+   	}
+   }
+}
+// стрелки  разместили по краям
+.arrow-left{
+	left:0;
+	// padding-right: 20px;
+}
+
+.arrow-right{
+	right: 0;
+	// padding-left: 20px;
+}
+.slick-active{
+
+outline:none; // говорим что ненадо подчеркивать 
+}
+
+
+// точки 
+.slick-dots li button:before{
+	width:21px;
+	height: 7px;
+	background-color: @grey;
+	color: transparent;  // не активная кнопка стало прозрачной
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+
+}
+
+.slick-dots li.slick-active button::before{
+	color: transparent;
+	background-color: @base-red;
+
+}
+
+.slick-dots{ // отодвинули переключатели точки вниз
+
+	bottom: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
