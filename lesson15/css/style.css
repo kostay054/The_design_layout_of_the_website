@@ -318,6 +318,7 @@ i.fa-camera-retro {
   height: 100px;
   text-align: center;
   background-color: #bgbgbg;
+  box-shadow: 0px 0px 36px 0px rgba(20, 20, 21, 0.2);
 }
 .services-info h4 {
   font-size: 30px;
