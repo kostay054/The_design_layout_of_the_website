@@ -408,9 +408,11 @@ i.fa-camera-retro {
 }
 .arrow-left {
   left: 0;
+  padding-right: 10px;
 }
 .arrow-right {
   right: 0;
+  padding-left: 13px;
 }
 .slick-active {
   outline: none;
